@@ -26,6 +26,13 @@ public class ItemActionRegistry {
         getJavaPlugin().getServer().getPluginManager().registerEvents(new InventoryClickListener(), getJavaPlugin());
     }
 
+
+    /**
+     *  Registers the click-Action for the specified itembuilder
+     *  only called in ItemBuilder#build
+     * @param itemBuilder specified itemBuilder
+     * @param action specified action
+     */
     public static void register(ItemBuilder itemBuilder, Consumer<InventoryClickEvent> action) {
 
         if(javaPlugin == null) {
@@ -40,6 +47,10 @@ public class ItemActionRegistry {
         actions.put(id, new RegisteredAction(action, itemBuilder.getClickInventoryHolder()));
     }
 
+    /**
+     * Accepts the Consumer if action is nonnull and inventory holder is correct
+     * @param event InventoryClickEvent
+     */
     public static void handleClick(InventoryClickEvent event) {
         ItemStack clicked = event.getCurrentItem();
         if (clicked == null || clicked.getType() == Material.AIR) return;
