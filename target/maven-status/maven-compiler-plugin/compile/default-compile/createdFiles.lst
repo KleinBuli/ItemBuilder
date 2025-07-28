@@ -1,0 +1,4 @@
+de\kleinbuli\itemBuilder\ItemBuilder.class
+de\kleinbuli\itemBuilder\actions\InventoryClickListener.class
+de\kleinbuli\itemBuilder\actions\RegisteredAction.class
+de\kleinbuli\itemBuilder\actions\ItemActionRegistry.class

@@ -1,0 +1,4 @@
+name: ItemBuilder
+version: '1.0-SNAPSHOT'
+main: de.kleinbuli.itemBuilder.ItemBuilder
+api-version: '1.21'
